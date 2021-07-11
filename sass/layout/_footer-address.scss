@@ -1,0 +1,42 @@
+/* Address */
+
+.page-footer__contacts {
+  margin-right: 70px;
+}
+.page-footer__address {
+  display: block;
+
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+}
+.address {
+  width: 231px;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__text {
+  margin-top: 0;
+
+  color: var(--primary-white-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__link {
+  color: var(--address-link-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
