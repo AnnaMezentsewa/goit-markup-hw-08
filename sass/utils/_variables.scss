@@ -1,0 +1,37 @@
+:root {
+  /* Primary Colors */
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+
+  /* Background Colors */
+  --second-background: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --bgcolor-modal-window: rgba(0, 0, 0, 0.2);
+  --works-label-color: rgba(47, 48, 58, 0.8);
+  --address-link-color: rgba(255, 255, 255, 0.6);
+  --bt-hover-color: #188ce8;
+
+  /* Border colors */
+  --header-border-color: #ececec;
+  --card-border-color: #eeeeee;
+  --form-border: rgba(33, 33, 33, 0.2);
+
+  /* Icons colors */
+  --social-icon-color: #afb1b8;
+  --bgfooter-icon-color: rgba(255, 255, 255, 0.1);
+  --modal-close-icon: rgba(0, 0, 0, 0.1);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+
+  /* portfolio */
+  --portfolio-card-hover: rgba(33, 150, 243, 0.9);
+
+  /* Cubic */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Display size
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
