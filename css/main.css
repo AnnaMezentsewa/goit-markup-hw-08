@@ -274,6 +274,7 @@ summary {
   --works-label-color: rgba(47, 48, 58, 0.8);
   --address-link-color: rgba(255, 255, 255, 0.6);
   --bt-hover-color: #188ce8;
+  --hero-gradient-color: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
   /* Border colors */
   --header-border-color: #ececec;
   --card-border-color: #eeeeee;
@@ -659,34 +660,90 @@ img {
 
 /* Hero */
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-color: var(--footer-bg-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
   margin-bottom: 30px;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.364;
+  }
 }
 
 /* Overlya */
 .overlya {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid #000000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/bg.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg.jpg);
+  outline: 1px solid var(--title-text-color);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .overlya {
+    max-width: 480px;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color))), url("../images/hero/mobile/hero-mob1x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color)), url("../images/hero/mobile/hero-mob1x.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlya {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color)), to(var(--hero-gradient-color))), url("../images/hero/mobile/hero-mob2x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color), var(--hero-gradient-color)), url("../images/hero/mobile/hero-mob2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlya {
+    max-width: 768px;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color)), to(var(--hero-gradient-color))), url("../images/hero/tablet/hero-tab1x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color), var(--hero-gradient-color)), url("../images/hero/tablet/hero-tab1x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlya {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color)), to(var(--hero-gradient-color))), url("../images/hero/tablet/hero-tab2x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color), var(--hero-gradient-color)), url("../images/hero/tablet/hero-tab2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlya {
+    max-width: 1600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color)), to(var(--hero-gradient-color))), url("/images/hero/desktop/hero-desktop1x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color), var(--hero-gradient-color)), url("/images/hero/desktop/hero-desktop1x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlya {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--hero-gradient-color)), to(var(--hero-gradient-color))), url("/images/hero/desktop/hero-desktop2x.jpg");
+    background-image: linear-gradient(to right, var(--hero-gradient-color), var(--hero-gradient-color)), url("/images/hero/desktop/hero-desktop2x.jpg");
+  }
 }
 
 /* Button */
