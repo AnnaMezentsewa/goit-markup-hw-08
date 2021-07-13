@@ -19,36 +19,34 @@
 
 .menu-container {
   position: fixed;
-  top: 0;
-  left: 0;
-
   display: flex;
   flex-direction: column;
+
+  top: 0;
+  left: 0;
   padding: 48px 40px;
 
   width: 100vw;
   height: 100vh;
 
-  z-index: 2;
+  z-index: 999;
   background-color: var(--primary-white-color);
 
-  transform: translateX(100%);
-
+  transform: translateY(100%);
+  visibility: hidden;
   transition: transform 250ms var(--timing-function);
 
   &.is-open {
-    transform: translateX(0);
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: none;
+    transform: translateY(0);
+    visibility: visible;
   }
 }
 
 .menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin: 0;
   padding: 0;
 
@@ -56,7 +54,7 @@
   border: none;
 
   background-color: transparent;
-
+  transition: fill 250ms var(--timing-function);
   &:hover,
   &:focus {
     fill: var(--accent-color);
@@ -73,10 +71,6 @@
   }
 }
 
-.mobile-menu {
-  margin-bottom: auto;
-}
-
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -91,6 +85,7 @@
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+  transition: color 250ms var(--timing-function);
 
   &:hover,
   &:focus {
@@ -117,6 +112,7 @@
 }
 
 .mobile-contacts {
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
@@ -125,6 +121,7 @@
 }
 
 .mobile-contacts__link {
+  display: inline-block;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
