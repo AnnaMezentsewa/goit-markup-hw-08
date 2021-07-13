@@ -1,10 +1,21 @@
 /* Footer */
 
 .page-footer {
+  padding: 60px 0;
   background-color: var(--footer-bg-color);
 }
 .page-footer__container {
-  display: flex;
-  align-items: baseline;
-  padding: 60px 0;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+    flex-wrap: nowrap;
+  }
 }

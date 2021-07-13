@@ -1,7 +1,17 @@
 /* Address */
 
 .page-footer__contacts {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 231px;
+    margin-right: 70px;
+  }
 }
 .page-footer__address {
   display: block;
@@ -10,9 +20,7 @@
   line-height: 1.71;
   font-style: normal;
 }
-.address {
-  width: 231px;
-}
+
 .address__item:not(:last-child) {
   margin-bottom: 9px;
 }
