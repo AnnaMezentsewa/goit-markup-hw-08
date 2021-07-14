@@ -292,6 +292,7 @@ summary {
 
 /* ClObAl */
 body {
+  padding-top: 80px;
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
