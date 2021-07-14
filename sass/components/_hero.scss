@@ -33,12 +33,13 @@
 
 .overlya {
   max-width: 1600px;
+  max-height: 400px;
 
   margin-left: auto;
   margin-right: auto;
 
   outline: 1px solid var(--title-text-color);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -86,6 +87,7 @@
   // Desktop
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
+    max-height: 600px;
     background-image: linear-gradient(
         to right,
         var(--hero-gradient-color),
